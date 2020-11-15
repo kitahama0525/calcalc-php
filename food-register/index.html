@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>食べもの登録｜calcalc</title>
+    <meta name="description" content="これは食べもの登録の説明文です">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="calcalc">
+    <meta property="og:description" content="説明文">
+    <meta property="og:url" content="/food-register/">
+    <meta property="og:site_name" content="calcalc">
+    <meta property="og:image" content="/assets/images/ogp.png">
+    <link href="/assets/images/favicon.ico" rel="icon"/>
+    <link href="/assets/images/favicon.ico" rel="shortcut icon"/>
+    <link href="/assets/images/web-clipicon.png" rel="apple-touch-icon"/>
+    <link href="/assets/css/style.css" rel="stylesheet"/>
+    <link href="/assets/css/app.css" rel="stylesheet"/><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+      window.WebFontConfig = {
+        // 以下にフォントを指定する
+        google: {
+          families: [
+            'Roboto:400,700'
+          ]
+        },
+        custom: {
+          families: ['Noto+Sans+JP:400,700'],
+          urls: [
+            "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+          ],
+        },
+        active: function () {
+          sessionStorage.fonts = true;
+        }
+      };
+      
+      (function () {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+      
+    </script>
+  </head>
+  <body class="top"><a class="c-slidebar-button js-slidebar-button" href="#"><span class="c-slidebar-button__line"><span></span><span></span><span></span></span><span class="c-slidebar-button__text is-open">MENU</span><span class="c-slidebar-button__text is-close">CLOSE</span></a>
+    <div class="c-slidebar-menu js-slidebar-menu is-top-to-bottom">
+      <ul>
+        <li><a href="#">メニュー1</a>
+        </li>
+        <li><a href="#">メニュー2</a>
+        </li>
+        <li class="c-slidebar-menu__parent js-accordion"><span data-accordion-title="menu-title">メニュー3</span>
+          <ul class="c-slidebar-menu__children" data-accordion-content="menu-text">
+            <li><a href="#">メニュー3-1</a>
+            </li>
+            <li><a href="#">メニュー3-2</a>
+            </li>
+            <li><a href="#">メニュー3-3</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">メニュー4</a>
+        </li>
+        <li><a href="#">メニュー5</a>
+        </li>
+        <li><a href="#">メニュー6</a>
+        </li>
+      </ul><a class="c-slidebar-menu__button c-button is-contact" href="#">お問い合わせ</a>
+      <div class="c-slidebar-menu__sns-btns"><a class="c-slidebar-menu__sns-btn" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a class="c-slidebar-menu__sns-btn" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <header class="l-header-minimal">
+      <div class="l-header-minimal__content">
+        <div class="l-header-minimal__heading"><a href="/"><img src="/assets/images/logo.png" alt="calcalc"/></a>
+        </div>
+        <nav class="l-header-minimal__nav">
+          <ul>
+            <li><a class="js-current-nav" href="/">ホーム</a>
+            </li>
+            <li><a class="js-current-nav" href="/pfc/">PFCバランス</a>
+            </li>
+            <li><a class="js-current-nav" href="/search/">食べもの検索</a>
+            </li>
+            <li><a class="js-current-nav" href="/history/">履歴</a>
+            </li>
+            <li><a class="js-current-nav" href="/food-register/">食べもの登録</a>
+            </li>
+            <li><a class="js-current-nav" href="/settings/">ユーザー設定</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="l-main">
+      <h2 class="c-heading is-xlg">食べもの登録</h2>
+      <div class="c-forms">
+        <form action="/search/" method="POST">
+          <div class="c-forms__container">
+            <div class="c-forms__block">
+              <div class="c-forms__title">食べもの名
+              </div>
+              <div class="c-forms__input">
+                <input type="name">
+              </div>
+            </div>
+            <div class="c-forms__block">
+              <div class="c-forms__title">カロリー
+              </div>
+              <div class="c-forms__input">
+                <input type="calories">
+              </div>
+            </div>
+            <div class="c-forms__block">
+              <div class="c-forms__title">たんぱく質
+              </div>
+              <div class="c-forms__input">
+                <input type="protein">
+              </div>
+            </div>
+            <div class="c-forms__block">
+              <div class="c-forms__title">脂質
+              </div>
+              <div class="c-forms__input">
+                <input type="fat">
+              </div>
+            </div>
+            <div class="c-forms__block">
+              <div class="c-forms__title">炭水化物
+              </div>
+              <div class="c-forms__input">
+                <input type="carbohydrate">
+              </div>
+            </div>
+            <div class="c-forms__block">
+              <div class="c-forms__title">画像
+              </div>
+              <div class="c-forms__file">
+                <input type="file">
+              </div>
+            </div>
+            <div class="c-forms__submit">
+              <button class="c-button is-color-accent" type="submit">登録する</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>
